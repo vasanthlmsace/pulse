@@ -50,7 +50,6 @@ Feature: Session trigger event.
     Then I should see "Session booking"
     Then the field "Session booking" matches value "All"
     And I should see "Session module"
-    Then I click on "#fitem_id_condition_session_modules .form-autocomplete-downarrow" "css_element"
     Then I should see "FaceFace 01" in the "#fitem_id_condition_session_modules" "css_element"
     And I press "Save changes"
     And I set the field "templateid" to "WELCOME MESSAGE 02"
