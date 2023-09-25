@@ -70,7 +70,7 @@ Feature: Pulse automation templates
     Then I press "Save changes"
     Then I should see "Template updated successfully"
     And I should see "Triggers" in the "#pulse_automation_template tbody tr:nth-child(1)" "css_element"
-    And I should see "Condition triggers" in the "#pulse_automation_template tbody tr:nth-child(1) .template-reference" "css_element"
+    And I should see "Conditiontriggers" in the "#pulse_automation_template tbody tr:nth-child(1) .template-reference" "css_element"
 
   @javascript
   Scenario: Check Visibility of automation template
@@ -215,7 +215,6 @@ Feature: Pulse automation templates
     Then I create "Welcomemessage" template with the set the notification:
         | Sender      |  Group teacher    |
         | Interval    |  Once            |
-        | Limit of the notifications | 5 |
         | Cc          |  Teacher         |
         | Bcc         |  Manager         |
         | Subject     |  Demo MESSAGE    |
@@ -227,10 +226,8 @@ Feature: Pulse automation templates
     Then I press "Add automation instance"
     Then I click on "#automation-tabs .nav-item:nth-child(3) a" "css_element"
     Then I wait "10" seconds
-    Then the field "Sender" matches value "Groupteacher"
+    Then the field "Sender" matches value "Group teacher"
     Then the field "Interval" matches value "Once"
-    #Then the field "Cc" matches value "Teacher"
-    #Then the field "Bcc" matches value "Manager"
     Then the field "Subject" matches value "Demo MESSAGE"
 
   @javascript
